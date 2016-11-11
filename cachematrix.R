@@ -1,4 +1,4 @@
-## Functions to store in cacje and get from cache (or solve) if not 
+## Functions to store in cache and get from cache (or solve) if not 
 ## stored, a matrix and its inverse
 
 ## makeCacheMatrix produces a list of the functions:
@@ -13,6 +13,9 @@ makeCacheMatrix <- function(x = matrix()) {
         	inv <<- NULL 
         	
         }
+        ##It is not clear that we strictly need the get function
+        ## to fulfill the requirements for the assignement.
+        ##However, I kept it for completion.
         get <- function() x
         setInv <- function(inverse) inv <<- inverse
         getInv <- function() inv
